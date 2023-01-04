@@ -205,7 +205,7 @@ class ExpandableBottomSheetState extends State<ExpandableBottomSheet>
                   );
                 },
                 child: GestureDetector(
-                  onTap: _toggle,
+                  onTap: toggle,
                   onVerticalDragDown: widget.isDraggable ? _dragDown : (_) {},
                   onVerticalDragUpdate:
                       widget.isDraggable ? _dragUpdate : (_) {},
@@ -305,7 +305,7 @@ class ExpandableBottomSheetState extends State<ExpandableBottomSheet>
     }
   }
 
-  void _toggle() {
+  void toggle() {
     if (widget.enableToggle) {
       if (expansionStatus == ExpansionStatus.expanded) {
         _callCallbacks = true;
